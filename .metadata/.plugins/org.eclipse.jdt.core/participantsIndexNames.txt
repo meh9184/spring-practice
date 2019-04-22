@@ -9,3 +9,5 @@ C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.j
 \0418_DITest\src\main\java
 C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1168103795.index
 \0422_DITestConfig\src\main\java
+C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1281801869.index
+\0422_AOPTest\src\main\java
