@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="0419_DITestAnnotation"/>
+<aop-project name="0417_SpringStart"/>
+<aop-project name="0418_DITest"/>
+</aop-reference-model>

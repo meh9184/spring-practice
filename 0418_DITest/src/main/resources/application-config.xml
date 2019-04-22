@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="duraBattery" 
+	class="com.coderby.myapp.toy.service.DuraBattery" />
+
+	<bean id="enerBattery" 
+	class="com.coderby.myapp.toy.service.EnerBattery" />
+
+<!-- 1. 생성자 기반 의존성 주입 	
+	<bean id="toyController1" 
+	class="com.coderby.myapp.toy.controller.ToyController">
+		<constructor-arg ref="duraBattery" />
+	</bean>
+
+	<bean id="toyController2" 
+	class="com.coderby.myapp.toy.controller.ToyController">
+		<constructor-arg ref="enerBattery" />
+	</bean>
+ -->
+<!-- Setter 기반 의존성 주입 -->
+	<bean id="toyController1" p:battery-ref="duraBattery"
+	class="com.coderby.myapp.toy.controller.ToyController"/>
+
+
+	<bean id="toyController2" 
+	class="com.coderby.myapp.toy.controller.ToyController">
+		<property name="battery" ref="enerBattery" />
+	</bean>
+
+
+
+</beans>
