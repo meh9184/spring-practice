@@ -26,7 +26,7 @@ public class HelloMain {
 		HelloController controller = 
 				context.getBean("helloController", HelloController.class);
 		
-		controller.Hello("Eunhwan Moon");
+		controller.Hello("¹®ÀºÈ¯");
 		
 		context.close();
 	}

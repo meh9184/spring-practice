@@ -1,7 +1,6 @@
 package com.coderby.myapp.hello.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import com.coderby.myapp.hello.service.IHelloService;
 
@@ -13,6 +12,7 @@ public class HelloController {
 	// 2. 어노테이션을 통해 Bean 컨테이너에 객체 생성
 	// 3. 의존성 주입이 필요한 객체에 @Autowired 삽입하여 의존성 주입
 	
+	@Autowired
 	IHelloService helloService;
 
 
