@@ -1,6 +1,7 @@
 package com.coderby.myapp.hello.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import com.coderby.myapp.hello.service.IHelloService;
 
@@ -13,20 +14,9 @@ public class HelloController {
 	// 3. 의존성 주입이 필요한 객체에 @Autowired 삽입하여 의존성 주입
 	
 	@Autowired
+	@Qualifier("helloServiceProxy")
 	IHelloService helloService;
 
-
-//	// 1. 생성자 의존성 주입
-//	public HelloController(IHelloService helloService) {
-//		this.helloService = helloService;
-//	}
-	
-//	//2. setter 의존성 주입
-//	public void setHelloService(IHelloService helloService) {
-//		this.helloService = helloService;
-//	}
-	
-	
 	public void Hello(String name) {
 		System.out.println("HelloController : " + helloService.sayHello(name));
 	}

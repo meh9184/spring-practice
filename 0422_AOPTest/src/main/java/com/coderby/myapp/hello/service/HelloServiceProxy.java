@@ -1,20 +1,21 @@
 package com.coderby.myapp.hello.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
-public class HelloService implements IHelloService{
-
+@Component
+public class HelloServiceProxy extends HelloService{
+	
 	@Override
 	public String sayHello(String name) {
-		String message = "Hello~~~" + name;
+		HelloLog.log();
+		String message = super.sayHello(name);
 		return message;
 	}
 	
 	@Override
 	public String sayGoodbye(String name) {
-		
 		String message = "Goodbye~~~" + name;
 		return message;
 	}
+	
 }
