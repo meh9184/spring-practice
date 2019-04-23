@@ -17,6 +17,5 @@
  		<aop:aspect ref="helloLog">
  			<aop:before pointcut-ref="hello" method="log"/>
  		</aop:aspect>
- 	
  	</aop:config>
 </beans>
