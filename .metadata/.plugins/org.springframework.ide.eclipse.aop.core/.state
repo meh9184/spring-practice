@@ -3,4 +3,6 @@
 <aop-project name="0419_DITestAnnotation"/>
 <aop-project name="0417_SpringStart"/>
 <aop-project name="0418_DITest"/>
+<aop-project name="0422_DITestConfig"/>
+<aop-project name="0422_AOPTest"/>
 </aop-reference-model>
