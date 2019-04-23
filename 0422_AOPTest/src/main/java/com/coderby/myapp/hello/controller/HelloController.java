@@ -12,9 +12,9 @@ public class HelloController {
 	// 1. application-config.xml 파일에 컴포넌트 스캔 추가
 	// 2. 어노테이션을 통해 Bean 컨테이너에 객체 생성
 	// 3. 의존성 주입이 필요한 객체에 @Autowired 삽입하여 의존성 주입
-	
+
 	@Autowired
-	@Qualifier("helloServiceProxy")
+//	@Qualifier("helloServiceProxy")
 	IHelloService helloService;
 
 	public void Hello(String name) {
