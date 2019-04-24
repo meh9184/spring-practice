@@ -1,8 +1,8 @@
 package com.coderby.myapp.toy.service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class EnerBattery implements IBattery {
 	@Override
 	public void useBattery() {

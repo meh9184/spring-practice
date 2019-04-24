@@ -12,10 +12,6 @@ public class ToyController {
 	@Qualifier("duraBattery")
 	IBattery battery;
 	
-	public ToyController(IBattery battery) {
-		this.battery = battery;
-	}
-	
 	public void playToy() {
 		System.out.println("장난감을 가지고 놉니다.");
 		battery.useBattery();

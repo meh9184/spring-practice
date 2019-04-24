@@ -7,18 +7,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
-<!-- 
-	<import resource="application-config-battery.xml" />
-	
-	<bean id="toyController" 
-	class="com.coderby.myapp.toy.controller.ToyController">
-		<constructor-arg ref="duraBattery" />
-	</bean>
-	<bean id="batteryLog" class="com.coderby.myapp.toy.service.BatteryLog"/>
- -->	
- 
+
  	<context:component-scan base-package="com.coderby.myapp.toy"/>
- 		
+ 	
+	<bean id="batteryLog" class="com.coderby.myapp.toy.service.BatteryLog"/>
+ 	
 	<aop:config>
  		
  		<!-- 포인트컷 -->

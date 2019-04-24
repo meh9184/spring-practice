@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\문은환\eclipse-workspace\ITBank_Spring\0422_AOPTestProxy"/>
 			<item value="C:\Users\문은환\eclipse-workspace\ITBank_Spring\0419\SpringStart"/>
 			<item value="C:\Users\문은환\eclipse-workspace\ITBank_Spring\0418_DITest"/>
 			<item value="C:\Users\문은환\eclipse-workspace\ITBank_Spring\0417_SpringStart"/>

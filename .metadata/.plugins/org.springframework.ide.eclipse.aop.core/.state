@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="0419_DITestAnnotation"/>
+<aop-project name="0423_AOPTest">
+<aspect-definition advice-class-name="com.coderby.myapp.hello.service.HelloLog" advice-method-name="log" advice-type="BEFORE" aspect-end-line-number="25" aspect-name="helloLog" aspect-start-line-number="25" factory-id="org.springframework.ide.eclipse.aop.core.beanAspectDefinitionElementFactory" file="/0423_AOPTest/src/main/resources/application-config.xml" pointcut-expression="execution(* com.coderby..HelloService.sayHello(..))" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:0423_AOPTest|3:src/main/resources/application-config.xml|7:beans:8|8:helloService:8" bean-file="/0423_AOPTest/src/main/resources/application-config.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0423_AOPTest/src/main/resources/application-config.xml" source="=0423_AOPTest/src\/main\/java&lt;com.coderby.myapp.hello.service{HelloLog.java[HelloLog~log" source-start-line="4" target="=0423_AOPTest/src\/main\/java&lt;com.coderby.myapp.hello.service{HelloService.java[HelloService~sayHello~QString;" target-start-line="9"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.coderby.myapp.hello.aop.PerformanceAspect" advice-method-name="trace" advice-type="AROUND" aspect-end-line-number="28" aspect-name="performanceAspect" aspect-start-line-number="28" factory-id="org.springframework.ide.eclipse.aop.core.beanAspectDefinitionElementFactory" file="/0423_AOPTest/src/main/resources/application-config.xml" pointcut-expression="execution(* com.coderby..HelloService.sayGoodbye(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:0423_AOPTest|3:src/main/resources/application-config.xml|7:beans:8|8:helloService:8" bean-file="/0423_AOPTest/src/main/resources/application-config.xml" bean-start-line="8" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0423_AOPTest/src/main/resources/application-config.xml" source="=0423_AOPTest/src\/main\/java&lt;com.coderby.myapp.hello.aop{PerformanceAspect.java[PerformanceAspect~trace~QProceedingJoinPoint;" source-start-line="8" target="=0423_AOPTest/src\/main\/java&lt;com.coderby.myapp.hello.service{HelloService.java[HelloService~sayGoodbye~QString;" target-start-line="15"/>
+</aspect-definition>
+</aop-project>
 <aop-project name="0417_SpringStart"/>
+<aop-project name="0423_DITestAOP"/>
 <aop-project name="0418_DITest"/>
 <aop-project name="0422_DITestConfig"/>
-<aop-project name="0422_AOPTest"/>
+<aop-project name="0422_AOPTestProxy"/>
 </aop-reference-model>
