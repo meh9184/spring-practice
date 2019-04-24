@@ -15,9 +15,7 @@ public class HelloLog{
 	
 	@Pointcut(value="execution(* com.coderby..*.sayGoodbye(..))")
 	private void goodbyePointcut() {}
-	
-	@After("helloPointcut()")
-	@Before("goodbyePointcut()")
+
 	public static void log() {
 		System.out.println(">>>LOG : " + new java.util.Date());
 		System.out.println("정상적으로 로딩 완료되었습니다.");
