@@ -1,5 +1,6 @@
 package com.coderby.myapp.hello.service;
 
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -15,6 +16,7 @@ public class HelloLog{
 	@Pointcut(value="execution(* com.coderby..*.sayGoodbye(..))")
 	private void goodbyePointcut() {}
 	
+	@After("helloPointcut()")
 	@Before("goodbyePointcut()")
 	public static void log() {
 		System.out.println(">>>LOG : " + new java.util.Date());
