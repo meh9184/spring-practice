@@ -3,7 +3,7 @@ package com.coderby.myapp.hr.model;
 import java.sql.Date;
 
 public class EmpVO {
-	// Field
+	// Member º¯¼ö
 	private int employeeId;
 	private String firstName;
 	private String lastName;
@@ -16,7 +16,7 @@ public class EmpVO {
 	private int managerId;
 	private int departmentId;
 	
-	// toString
+	// ToString
 	@Override
 	public String toString() {
 		return "EmpVO [employeeId=" + employeeId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
