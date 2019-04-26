@@ -1,20 +1,22 @@
 package com.coderby.myapp.hr.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class EmpVO {
-	int employeeId;
-	String firstName;
-	String lastName;
-	String email;
-	String phoneNumber;
-	Date hireDate;
-	String jobId;
-	double salary;
-	double commissionPct;
-	int managerId;
-	int departmentId;
+	// Field
+	private int employeeId;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String phoneNumber;
+	private Date hireDate;
+	private String jobId;
+	private double salary;
+	private double commissionPct;
+	private int managerId;
+	private int departmentId;
 	
+	// toString
 	@Override
 	public String toString() {
 		return "EmpVO [employeeId=" + employeeId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
@@ -23,6 +25,7 @@ public class EmpVO {
 				+ departmentId + "]";
 	}
 	
+	// Getter/Setter
 	public int getEmployeeId() {
 		return employeeId;
 	}
