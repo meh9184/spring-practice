@@ -2,9 +2,9 @@ package com.coderby.myapp.hr.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class EmpReopsitory implements IEmpRepository{
 
 	@Autowired
