@@ -11,8 +11,10 @@ public class EmpMain {
 		
 		IEmpService empService = context.getBean("empService", IEmpService.class);
 	
-		System.out.println("--- 전체 사원의 수 조회");
+		System.out.println("--- 전체 사원 수 조회");
 		System.out.println(empService.getEmpCount());
+		
+		System.out.println("--- 특정 부서의 사원 수 조회");
 		System.out.println(empService.getEmpCount(50));
 		
 	}
