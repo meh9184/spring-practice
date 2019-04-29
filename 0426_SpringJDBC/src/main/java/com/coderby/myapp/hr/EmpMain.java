@@ -13,9 +13,7 @@ public class EmpMain {
 	
 		System.out.println("--- 전체 사원의 수 조회");
 		System.out.println(empService.getEmpCount());
+		System.out.println(empService.getEmpCount(50));
+		
 	}
 }
-
-
-
-

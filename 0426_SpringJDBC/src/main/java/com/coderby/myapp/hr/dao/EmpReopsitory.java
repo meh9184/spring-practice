@@ -16,4 +16,9 @@ public class EmpReopsitory implements IEmpRepository{
 		return jdbcTemplate.queryForObject(sql, Integer.class);
 	}
 	
+	public int getEmpCount(int deptId) {
+		String sql = "SELECT COUNT(*) FROM employees WHERE department_id=?";
+		return jdbcTemplate.queryForObject(sql, Integer.class, deptId);
+	}
+	
 }

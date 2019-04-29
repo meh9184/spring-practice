@@ -16,6 +16,9 @@ public class EmpService implements IEmpService {
 		return empRepository.getEmpCount();
 	}
 
+	public int getEmpCount(int deptId) {
+		return empRepository.getEmpCount(deptId);
+	}
 }
 
 
