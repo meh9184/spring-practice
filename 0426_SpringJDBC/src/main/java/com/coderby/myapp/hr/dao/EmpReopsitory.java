@@ -40,20 +40,26 @@ public class EmpReopsitory implements IEmpRepository{
 	
 	@Override
 	public int getEmpCount() {
-		String sql = "SELECT COUNT(*) FROM employees";
+		String sql = "SELECT COUNT(*) FROM EMPLOYEES";
 		return jdbcTemplate.queryForObject(sql, Integer.class);
 	}
 	
 	@Override
 	public int getEmpCount(int deptId) {
-		String sql = "SELECT COUNT(*) FROM employees WHERE department_id=?";
+		String sql = "SELECT COUNT(*) FROM EMPLOYEES WHERE department_id=?";
 		return jdbcTemplate.queryForObject(sql, Integer.class, deptId);
 	}
 	
 	@Override
 	public List<EmpVO> getEmpList(){
-		String sql = "SELECT * FROM employees";
+		String sql = "SELECT * FROM EMPLOYEES";
 		return jdbcTemplate.query(sql, new EmpMapper());
+	}
+
+	@Override
+	public EmpVO getEmpInfo(int empId) {
+		String sql = "SELECT * FROM EMPLOYEES WHERE employee_id=?";
+		return jdbcTemplate.queryForObject(sql, new EmpMapper(), empId);
 	}
 	
 }

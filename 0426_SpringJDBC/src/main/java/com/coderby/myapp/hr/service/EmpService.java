@@ -29,6 +29,12 @@ public class EmpService implements IEmpService {
 	public List<EmpVO> getEmpList() {
 		return empRepository.getEmpList();
 	}
+
+	@Override
+	public EmpVO getEmpInfo(int empId) {
+		return empRepository.getEmpInfo(empId);
+	}
+	
 	
 	
 }

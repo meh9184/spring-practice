@@ -21,5 +21,7 @@ public class EmpMain {
 		System.out.println("--- 전체 사원 조회");
 		System.out.println(empService.getEmpList());
 		
+		System.out.println("--- 특정 사원 조회");
+		System.out.println(empService.getEmpInfo(100));
 	}
 }

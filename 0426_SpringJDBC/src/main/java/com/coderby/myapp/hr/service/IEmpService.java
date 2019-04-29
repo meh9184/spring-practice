@@ -9,4 +9,5 @@ public interface IEmpService {
 	int getEmpCount();
 	int getEmpCount(int deptId);
 	List<EmpVO> getEmpList();
+	EmpVO getEmpInfo(int empId);
 }
