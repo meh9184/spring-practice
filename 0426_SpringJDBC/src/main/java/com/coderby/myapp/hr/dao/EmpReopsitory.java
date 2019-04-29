@@ -19,7 +19,6 @@ public class EmpReopsitory implements IEmpRepository{
 	
 	// RowMapper 구현 클래스 설정
 	private class EmpMapper implements RowMapper<EmpVO>{
-
 		@Override
 		public EmpVO mapRow(ResultSet rs, int rowNum) throws SQLException {
 			EmpVO emp = new EmpVO();			
@@ -36,7 +35,6 @@ public class EmpReopsitory implements IEmpRepository{
 			emp.setDepartmentId(rs.getInt("departmentId"));
 			return emp;
 		}
-		
 	}
 	
 	@Override
@@ -54,7 +52,7 @@ public class EmpReopsitory implements IEmpRepository{
 	@Override
 	public List<EmpVO> getEmpList(){
 		String sql = "SELECT * FROM employees";
-		return jdbcTemplate.queryForObject(sql, List.class);
+		return jdbcTemplate.query(sql, new EmpMapper());
 	}
 	
 }
