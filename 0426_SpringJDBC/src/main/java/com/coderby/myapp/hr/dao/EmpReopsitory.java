@@ -61,5 +61,22 @@ public class EmpReopsitory implements IEmpRepository{
 		String sql = "SELECT * FROM EMPLOYEES WHERE employee_id=?";
 		return jdbcTemplate.queryForObject(sql, new EmpMapper(), empId);
 	}
+
+	@Override
+	public void insertEmp(EmpVO emp) {
+		String sql = "INSERT INTO EMPLOYEES VALUES (?, ?, ?, ?, ?, SYSDATE, ?, ?, ?, ?, ?)";
+		jdbcTemplate.update(sql,
+				emp.getEmployeeId(),
+				emp.getFirstName(),
+				emp.getLastName(),
+				emp.getEmail(),
+				emp.getPhoneNumber(),
+				emp.getJobId(),
+				emp.getSalary(),
+				emp.getCommissionPct(),
+				emp.getManagerId(),
+				emp.getDepartmentId()
+		);
+	}
 	
 }

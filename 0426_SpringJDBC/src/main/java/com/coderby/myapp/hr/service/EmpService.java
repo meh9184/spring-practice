@@ -34,9 +34,11 @@ public class EmpService implements IEmpService {
 	public EmpVO getEmpInfo(int empId) {
 		return empRepository.getEmpInfo(empId);
 	}
-	
-	
-	
+
+	@Override
+	public void insertEmp(EmpVO emp) {
+		empRepository.insertEmp(emp);
+	}
 }
 
 

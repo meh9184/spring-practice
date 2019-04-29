@@ -10,4 +10,6 @@ public interface IEmpRepository {
 	int getEmpCount(int deptId);
 	List<EmpVO> getEmpList();
 	EmpVO getEmpInfo(int empId);
+	void insertEmp(EmpVO emp);
+	
 }

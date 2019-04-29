@@ -3,7 +3,7 @@ package com.coderby.myapp.hr.model;
 import java.sql.Date;
 
 public class EmpVO {
-	// Member º¯¼ö
+	// Member ë³€ìˆ˜
 	private int employeeId;
 	private String firstName;
 	private String lastName;
