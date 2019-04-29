@@ -1,6 +1,7 @@
 package com.coderby.myapp.hr;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
+
 import com.coderby.myapp.hr.service.IEmpService;
 
 public class EmpMain {
@@ -11,11 +12,14 @@ public class EmpMain {
 		
 		IEmpService empService = context.getBean("empService", IEmpService.class);
 	
-		System.out.println("--- ÀüÃ¼ »ç¿ø ¼ö Á¶È¸");
+		System.out.println("--- ì „ì²´ ì‚¬ì› ìˆ˜ ì¡°íšŒ");
 		System.out.println(empService.getEmpCount());
 		
-		System.out.println("--- Æ¯Á¤ ºÎ¼­ÀÇ »ç¿ø ¼ö Á¶È¸");
+		System.out.println("--- íŠ¹ì • ë¶€ì„œì˜ ì‚¬ì› ìˆ˜ ì¡°íšŒ");
 		System.out.println(empService.getEmpCount(50));
+		
+		System.out.println("--- ì „ì²´ ì‚¬ì› ì¡°íšŒ");
+		System.out.println(empService.getEmpList());
 		
 	}
 }

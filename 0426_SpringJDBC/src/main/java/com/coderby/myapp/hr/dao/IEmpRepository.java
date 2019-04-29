@@ -1,7 +1,8 @@
 package com.coderby.myapp.hr.dao;
 
-import com.coderby.myapp.hr.model.EmpVO;
 import java.util.List;
+
+import com.coderby.myapp.hr.model.EmpVO;
 
 
 public interface IEmpRepository {
