@@ -61,7 +61,7 @@ public class EmpMain {
 		
 		System.out.println("전체 사원의 숫자");
 		System.out.println(empService.getEmpCount());
-		System.out.println("특정 사원을 삭제");
+		System.out.println("210 사원 삭제");
 		empService.deleteEmp(210, "meh9184@naver.com");
 		System.out.println("전체 사원의 숫자");
 		System.out.println(empService.getEmpCount());
