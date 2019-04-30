@@ -109,7 +109,7 @@ public class EmpReopsitory implements IEmpRepository{
 
 	@Override
 	public void deleteJobHistory(int empId) {
-		String sql = "DELETE FROM job_hostory WHRER employee_id=?";
+		String sql = "DELETE FROM JOB_HISTORY WHRER employee_id=?";
 		jdbcTemplate.update(sql, empId);
 	}
 	
