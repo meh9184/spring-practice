@@ -102,11 +102,15 @@ public class EmpReopsitory implements IEmpRepository{
 	}
 
 	@Override
-	public void deleteEmp(EmpVO emp) {
-		String sql = "UPDATE EMPLOYEES SET "
-				+ "first_name=?, last_name=?, email=?, phone_number=?, hire_date=?,"
-				+ "job_id=?, salary=?, commission_pct=?, manager_id=?, department_id=? "
-				+ "WHERE employee_id=?";
+	public void deleteEmp(int empId, String email) {
+		String sql = "DELETE FROM EMPLOYEES WHERE employee_id=? AND email=?";
+		jdbcTemplate.update(sql, empId, email);
+	}
+
+	@Override
+	public void deleteJobHistory(int empId) {
+		String sql = "DELETE FROM job_hostory WHRER employee_id=?";
+		jdbcTemplate.update(sql, empId);
 	}
 	
 }

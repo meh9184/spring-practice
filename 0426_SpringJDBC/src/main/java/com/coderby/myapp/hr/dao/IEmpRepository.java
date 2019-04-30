@@ -12,5 +12,7 @@ public interface IEmpRepository {
 	EmpVO getEmpInfo(int empId);
 	void insertEmp(EmpVO emp);
 	void updateEmp(EmpVO emp);
-	void deleteEmp(EmpVO emp);
+	void deleteEmp(int empId, String email);
+	void deleteJobHistory(int empId);
+	
 }

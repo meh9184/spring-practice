@@ -44,6 +44,12 @@ public class EmpService implements IEmpService {
 	public void updateEmp(EmpVO emp) {
 		empRepository.updateEmp(emp);
 	}
+
+	@Override
+	public void deleteEmp(int empId, String email) {
+		empRepository.deleteJobHistory(empId);
+		empRepository.deleteEmp(empId, email);
+	}
 }
 
 
