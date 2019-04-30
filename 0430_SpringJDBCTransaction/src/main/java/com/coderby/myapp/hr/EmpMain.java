@@ -52,11 +52,11 @@ public class EmpMain {
 		System.out.println(emp210);
 		
 		
-//		System.out.println("--- 수정된 사원의 정보를 조회 및 출력합니다.");
-//		emp210.setSalary(emp210.getSalary() * 1.1);
-//		emp210.setEmail("meh9184@naver.com");
-//		empService.updateEmp(emp210);
-//		System.out.println(emp210);
+		System.out.println("--- 수정된 사원의 정보를 조회 및 출력합니다.");
+		emp210.setSalary(emp210.getSalary() * 1.1);
+		emp210.setEmail("meh9184@naver.com");
+		empService.updateEmp(emp210);
+		System.out.println(emp210);
 
 		
 		System.out.println("전체 사원의 숫자");
