@@ -13,17 +13,22 @@ public class EmpMain {
 		
 		IEmpService empService = context.getBean("empService", IEmpService.class);
 	
+		
 		System.out.println("--- 전체 사원 수 조회");
 		System.out.println(empService.getEmpCount());
+		
 		
 		System.out.println("--- 특정 부서의 사원 수 조회");
 		System.out.println(empService.getEmpCount(50));
 		
+		
 		System.out.println("--- 전체 사원 조회");
 		System.out.println(empService.getEmpList());
 		
+		
 		System.out.println("--- 특정 사원 조회");
 		System.out.println(empService.getEmpInfo(101));
+		
 		
 		System.out.println("--- 새로운 사원 정보를 입력합니다");
 		EmpVO emp = new EmpVO();
@@ -37,10 +42,23 @@ public class EmpMain {
 		emp.setCommissionPct(0.5);
 		emp.setManagerId(100);
 		emp.setDepartmentId(10);
+		try {
+			empService.insertEmp(emp);
+			System.out.println("Insert ok");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		EmpVO emp210 = empService.getEmpInfo(210);
+		System.out.println(emp210);
 		
-		empService.insertEmp(emp);
 		
-		System.out.println(empService.getEmpInfo(210));
+		System.out.println("--- 수정된 사원의 정보를 조회 및 출력합니다.");
+		emp210.setSalary(emp210.getSalary() / 1.1);
+		empService.updateEmp(emp210);
+		System.out.println(emp210);
+
+		
+		
 		
 	}
 }

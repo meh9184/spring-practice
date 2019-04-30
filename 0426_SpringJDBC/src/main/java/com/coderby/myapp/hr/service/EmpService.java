@@ -39,6 +39,11 @@ public class EmpService implements IEmpService {
 	public void insertEmp(EmpVO emp) {
 		empRepository.insertEmp(emp);
 	}
+
+	@Override
+	public void updateEmp(EmpVO emp) {
+		empRepository.updateEmp(emp);
+	}
 }
 
 

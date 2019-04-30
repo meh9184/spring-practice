@@ -78,5 +78,35 @@ public class EmpReopsitory implements IEmpRepository{
 				emp.getDepartmentId()
 		);
 	}
+
+	@Override
+	public void updateEmp(EmpVO emp) {
+		String sql = "UPDATE EMPLOYEES SET "
+				+ "first_name=?, last_name=?, email=?, phone_number=?, hire_date=?,"
+				+ "job_id=?, salary=?, commission_pct=?, manager_id=?, department_id=? "
+				+ "WHERE employee_id=?";
+		jdbcTemplate.update(sql,
+				emp.getFirstName(),
+				emp.getLastName(),
+				emp.getEmail(),
+				emp.getPhoneNumber(),
+				emp.getHireDate(),
+				emp.getJobId(),
+				emp.getSalary(),
+				emp.getCommissionPct(),
+				emp.getManagerId(),
+				emp.getDepartmentId(),
+				emp.getEmployeeId()
+		);
+		
+	}
+
+	@Override
+	public void deleteEmp(EmpVO emp) {
+		String sql = "UPDATE EMPLOYEES SET "
+				+ "first_name=?, last_name=?, email=?, phone_number=?, hire_date=?,"
+				+ "job_id=?, salary=?, commission_pct=?, manager_id=?, department_id=? "
+				+ "WHERE employee_id=?";
+	}
 	
 }

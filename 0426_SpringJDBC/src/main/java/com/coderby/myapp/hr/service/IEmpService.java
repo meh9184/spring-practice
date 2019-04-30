@@ -11,4 +11,5 @@ public interface IEmpService {
 	List<EmpVO> getEmpList();
 	EmpVO getEmpInfo(int empId);
 	void insertEmp(EmpVO emp);
+	void updateEmp(EmpVO emp);
 }

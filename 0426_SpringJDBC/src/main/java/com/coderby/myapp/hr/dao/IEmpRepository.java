@@ -11,5 +11,6 @@ public interface IEmpRepository {
 	List<EmpVO> getEmpList();
 	EmpVO getEmpInfo(int empId);
 	void insertEmp(EmpVO emp);
-	
+	void updateEmp(EmpVO emp);
+	void deleteEmp(EmpVO emp);
 }
