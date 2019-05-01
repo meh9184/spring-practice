@@ -9,7 +9,7 @@
 
 	
 	<!-- 1. 컨트롤러 사용을 위한 controller 패키지 컴포넌트 스캔 -->
-	<context:component-scan base-package="com.myapp.controller" />
+	<context:component-scan base-package="com.myweb.controller" />
 	
 	<!-- 2. 어노테이션을 이용한 mvc 패턴 개발이 가능하도록 mvc 어노테이션 입력 -->
 	<mvc:annotation-driven />
@@ -22,14 +22,6 @@
 	
 	<!-- 4. main 페이지로 사용할 뷰 지정 -->
 	<mvc:view-controller path="/" view-name="home" />
-	
-	<!-- 5. static 요소 경로 설정 -->
-	<mvc:resources location="/WEB-INF/resources/" mapping="/**" />
-	<mvc:resources location="/WEB-INF/resources/images/" mapping="/images/**" />
-	<mvc:resources location="/WEB-INF/resources/js/" mapping="/js/**" />
-	<mvc:resources location="/WEB-INF/resources/css/" mapping="/css/**" />
-	
-	
 	
 	
 </beans>
