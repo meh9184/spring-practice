@@ -21,7 +21,7 @@
 		</property>
 	</bean>
 	
-	<!-- 복호화를 위한 알고리즘 설정, PBEWithMDSAndDES 알고리즘을  사용한 난독화 -->
+	<!-- 복호화를 위한 알고리즘 설정, PBEWithMD5AndDES 알고리즘을  사용한 난독화 -->
 	<bean id="environmentVariablesConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
 		<property name="algorithm" value="PBEWithMD5AndDES" />
 		<property name="passwordEnvName" value="APP_ENCRYPTION_PASSWORD" />
@@ -30,8 +30,10 @@
 	<!-- 복호화 키 설정 -->
 	<bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
 		<property name="config" ref="environmentVariablesConfiguration" />
-		<property name="password" value="rktwlsrud" />
+		<property name="password" value="ansdmsghks" />
 	</bean>
+	
+	
 	
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
