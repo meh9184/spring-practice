@@ -51,6 +51,5 @@ public class EmpService implements IEmpService {
 	public void deleteEmp(int empId, String email) {
 		empRepository.deleteJobHistory(empId);
 		empRepository.deleteEmp(empId, email);
-		System.out.println(5/0);
 	}
 }
