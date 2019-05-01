@@ -9,7 +9,30 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-	<context:property-placeholder location="classpath:database/jdbc.properties" />
+	<!-- <context:property-placeholder location="classpath:database/jdbc.properties" /> -->
+
+	<!-- jdbc.properties 파일이 복호화 타겟임을 알리는 객체 -->	
+	<bean id="propertyConfigurer" class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+		<constructor-arg ref="configurationEncryptor" />
+		<property name="locations">
+			<list>
+				<value>classpath:/database/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 복호화를 위한 알고리즘 설정, PBEWithMDSAndDES 알고리즘을  사용한 난독화 -->
+	<bean id="environmentVariablesConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+		<property name="algorithm" value="PBEWithMD5AndDES" />
+		<property name="passwordEnvName" value="APP_ENCRYPTION_PASSWORD" />
+	</bean>
+	
+	<!-- 복호화 키 설정 -->
+	<bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+		<property name="config" ref="environmentVariablesConfiguration" />
+		<property name="password" value="rktwlsrud" />
+	</bean>
+	
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
