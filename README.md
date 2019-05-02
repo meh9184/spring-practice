@@ -2,5 +2,5 @@
 Spring 스터디 Repository
 
 + DI
-+ APO
++ AOP
 + MVC
