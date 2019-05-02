@@ -14,11 +14,9 @@ import com.coderby.myapp.hr.model.EmpVO;
 @Repository
 public class EmpRepository implements IEmpRepository {
 
-	//鍮� 而⑦뀒�씠�꼫�뿉�꽌 DB�뿉 �뿰寃고븷 �닔 �엳�뒗 而ㅻ꽖�뀡 媛앹껜 媛��졇�삤湲�
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
-	//RowMapper 援ы쁽 �겢�옒�뒪 �꽕�젙
 	private class EmpMapper implements RowMapper<EmpVO>{
 		@Override
 		public EmpVO mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -40,16 +38,15 @@ public class EmpRepository implements IEmpRepository {
 	}
 	
 	
-	
 	@Override
 	public int getEmpCount() {
 		String sql = "SELECT COUNT(*) FROM employees";
 		return jdbcTemplate.queryForObject(sql, Integer.class);
 	}
 
-	public int getEmpCount(int deptid) {
+	public int getEmpCount(int deptId) {
 		String sql = "SELECT COUNT(*) FROM EMPLOYEES WHERE department_id=?";
-		return jdbcTemplate.queryForObject(sql, Integer.class, deptid);
+		return jdbcTemplate.queryForObject(sql, Integer.class, deptId);
 	}
 
 	@Override
@@ -59,9 +56,9 @@ public class EmpRepository implements IEmpRepository {
 	}
 
 	@Override
-	public EmpVO getEmpInfo(int empid) {
+	public EmpVO getEmpInfo(int empId) {
 		String sql = "SELECT * FROM EMPLOYEES WHERE employee_id=?";
-		return jdbcTemplate.queryForObject(sql, new EmpMapper(), empid);
+		return jdbcTemplate.queryForObject(sql, new EmpMapper(), empId);
 	}
 
 	@Override
@@ -103,15 +100,15 @@ public class EmpRepository implements IEmpRepository {
 	}
 
 	@Override
-	public void deleteEmp(int empid, String email) {
+	public void deleteEmp(int empId, String email) {
 		String sql = "DELETE FROM employees WHERE employee_id=? AND email=?";
-		jdbcTemplate.update(sql, empid, email);
+		jdbcTemplate.update(sql, empId, email);
 	}
 
 	@Override
-	public void deleteJobHistory(int empid) {
+	public void deleteJobHistory(int empId) {
 		String sql = "DELETE FROM job_history WHERE employee_id=?";
-		jdbcTemplate.update(sql, empid);
+		jdbcTemplate.update(sql, empId);
 	}
 	
 }

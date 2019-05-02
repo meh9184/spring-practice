@@ -12,7 +12,6 @@ import com.coderby.myapp.hr.model.EmpVO;
 @Service
 public class EmpService implements IEmpService {
 
-	//하나 이상의 IEmpRepository의 쿼리문을 엮어서 하나의 서비스로 구성
 	@Autowired
 	IEmpRepository empRepository;
 	
@@ -22,8 +21,8 @@ public class EmpService implements IEmpService {
 	}
 
 	@Override
-	public int getEmpCount(int deptid) {
-		return empRepository.getEmpCount(deptid);
+	public int getEmpCount(int deptId) {
+		return empRepository.getEmpCount(deptId);
 	}
 
 	@Override
@@ -32,8 +31,8 @@ public class EmpService implements IEmpService {
 	}
 
 	@Override
-	public EmpVO getEmpInfo(int empid) {
-		return empRepository.getEmpInfo(empid);
+	public EmpVO getEmpInfo(int empId) {
+		return empRepository.getEmpInfo(empId);
 	}
 
 	@Override
@@ -48,9 +47,9 @@ public class EmpService implements IEmpService {
 
 	@Override
 	@Transactional("txManager")
-	public void deleteEmp(int empid, String email) {
-		empRepository.deleteJobHistory(empid);
-		empRepository.deleteEmp(empid, email);
+	public void deleteEmp(int empId, String email) {
+		empRepository.deleteJobHistory(empId);
+		empRepository.deleteEmp(empId, email);
 	}
 }
 

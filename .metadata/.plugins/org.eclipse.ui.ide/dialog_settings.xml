@@ -3,8 +3,10 @@
 	<section name="ExternalProjectImportWizard">
 		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\구직활동\학원\ITBANK_Spring\프로젝트_강사님\0501\SpringJDBC"/>
+			<item value="D:\구직활동\학원\ITBANK_Spring\프로젝트_강사님\0501"/>
 			<item value=""/>
 			<item value="D:\구직활동\학원\ITBANK_Spring\프로젝트_강사님\0426"/>
 			<item value="C:\Users\문은환\eclipse-workspace\ITBank_Spring\0422_AOPTestProxy"/>
@@ -13,8 +15,8 @@
 			<item value="C:\Users\문은환\eclipse-workspace\ITBank_Spring\0417_SpringStart"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
-			<item value="D:\구직활동\학원\ITBANK_Spring\프로젝트_강사님\0429.zip"/>
 			<item value=""/>
+			<item value="D:\구직활동\학원\ITBANK_Spring\프로젝트_강사님\0429.zip"/>
 		</list>
 	</section>
 </section>

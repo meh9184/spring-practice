@@ -16,15 +16,17 @@ public class EmpController {
 
 	@RequestMapping(value="/hr/count")
 	public String empCount(@RequestParam(
-		value="deptid", required=false, defaultValue="0") int deptid, 
+		value="deptId", required=false, defaultValue="0") int deptId, 
 			Model model) {
-		if(deptid==0) {
+		if(deptId==0) {
 			model.addAttribute("count", empService.getEmpCount());
 		}else {
-			model.addAttribute("count", empService.getEmpCount(deptid));
+			model.addAttribute("count", empService.getEmpCount(deptId));
 		}
 		return "hr/count";
 	}
+	
+	
 }
 
 

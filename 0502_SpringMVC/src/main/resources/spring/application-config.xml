@@ -30,7 +30,7 @@
 	<bean id="configurationEncryptor"
 	class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
 		<property name="config" ref="environmentVariablesConfiguration" />
-		<property name="password" value="qwerasdf"/>
+		<property name="password" value="ansdmsghks"/>
 	</bean>
 
 
