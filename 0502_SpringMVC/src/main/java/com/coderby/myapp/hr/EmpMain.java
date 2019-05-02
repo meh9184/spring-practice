@@ -7,63 +7,67 @@ import com.coderby.myapp.hr.service.IEmpService;
 
 public class EmpMain {
 	public static void main(String[] args) {
+		GenericXmlApplicationContext context =
+				new GenericXmlApplicationContext(
+						"spring/application-config.xml");
 		
-		GenericXmlApplicationContext context = 
-				new GenericXmlApplicationContext("spring/application-config.xml");
-		
-		IEmpService empService = context.getBean("empService", IEmpService.class);
+		IEmpService empService = 
+				context.getBean("empService", IEmpService.class);
 	
-		
-		System.out.println("--- ÀüÃ¼ »ç¿ø ¼ö Á¶È¸");
+		System.out.println("--- ì „ì²´ ì‚¬ì›ì˜ ìˆ˜ ì¡°íšŒ");
 		System.out.println(empService.getEmpCount());
 		
-		
-		System.out.println("--- Æ¯Á¤ ºÎ¼­ÀÇ »ç¿ø ¼ö Á¶È¸");
+		System.out.println("--- íŠ¹ì • ë¶€ì„œì˜ ì‚¬ì› ìˆ˜ ì¡°íšŒ");
 		System.out.println(empService.getEmpCount(50));
 		
-		
-		System.out.println("--- ÀüÃ¼ »ç¿ø Á¶È¸");
+		System.out.println("--- ì‚¬ì› ì „ì²´ ì •ë³´ë¥¼ ì¡°íšŒí•©ë‹ˆë‹¤");
 		System.out.println(empService.getEmpList());
 		
+		System.out.println("--- 100ë²ˆ ì‚¬ì›ì˜ ì •ë³´ë¥¼ ì¡°íšŒí•©ë‹ˆë‹¤.");
+		System.out.println(empService.getEmpInfo(100));
 		
-		System.out.println("--- Æ¯Á¤ »ç¿ø Á¶È¸");
-		System.out.println(empService.getEmpInfo(101));
-		
-		
-		System.out.println("--- »õ·Î¿î »ç¿ø Á¤º¸¸¦ ÀÔ·ÂÇÕ´Ï´Ù");
+		//ì§ì› ì…ë ¥ì„ ìœ„í•œ VOê°ì²´ ìƒì„±
+		System.out.println("--- ìƒˆë¡œìš´ ì‚¬ì› ì •ë³´ë¥¼ ì…ë ¥í•©ë‹ˆë‹¤.");
 		EmpVO emp = new EmpVO();
 		emp.setEmployeeId(210);
-		emp.setFirstName("Eunhwan");
-		emp.setLastName("Moon");
-		emp.setEmail("meh9184@naver.com");
-		emp.setPhoneNumber("010-5524-9184");
+		emp.setFirstName("JongHun");
+		emp.setLastName("Chae");
+		emp.setEmail("jh@mail.net");
+		emp.setPhoneNumber("222-222");
 		emp.setJobId("IT_PROG");
-		emp.setSalary(4200);
+		emp.setSalary(30000);
 		emp.setCommissionPct(0.5);
 		emp.setManagerId(100);
 		emp.setDepartmentId(10);
 		try {
 			empService.insertEmp(emp);
 			System.out.println("Insert ok");
-		}catch(Exception e){
+		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		//ë°©ê¸ˆì¶”ê°€í•œ 210ë²ˆ ê³„ì • ì¡°íšŒ
 		EmpVO emp210 = empService.getEmpInfo(210);
 		System.out.println(emp210);
 		
+		//ê¸‰ì—¬ ì¸ìƒ ì‹œí‚¤ê¸°
+		emp210.setSalary(emp210.getSalary() * 1.1);
+		empService.updateEmp(emp210);
 		
-//		System.out.println("--- ¼öÁ¤µÈ »ç¿øÀÇ Á¤º¸¸¦ Á¶È¸ ¹× Ãâ·ÂÇÕ´Ï´Ù.");
-//		emp210.setSalary(emp210.getSalary() * 1.1);
-//		emp210.setEmail("meh9184@naver.com");
-//		empService.updateEmp(emp210);
-//		System.out.println(emp210);
-
+		//ì—…ë°ì´íŠ¸ ëœ ì •ë³´ ì¶œë ¥í•˜ê¸°
+		System.out.println("--ìˆ˜ì •ëœ ì‚¬ì›ì˜ ì •ë³´ë¥¼ ì¡°íšŒ ë° ì¶œë ¥í•©ë‹ˆë‹¤.");
+		emp210 = empService.getEmpInfo(210);
+		System.out.println(emp210);
 		
-		System.out.println("ÀüÃ¼ »ç¿øÀÇ ¼ıÀÚ");
+		//210ë²ˆ ì‚¬ì› ì‚­ì œí•˜ê¸°
+		System.out.println("ì „ì²´ ì‚¬ì›ì˜ ìˆ«ì");
 		System.out.println(empService.getEmpCount());
-		System.out.println("210 »ç¿ø »èÁ¦");
-		empService.deleteEmp(210, "meh9184@naver.com");
-		System.out.println("ÀüÃ¼ »ç¿øÀÇ ¼ıÀÚ");
+		System.out.println("210ë²ˆ ì‚¬ì› ì‚­ì œ");
+		empService.deleteEmp(210, "jh@mail.net");
+		System.out.println("ì‚­ì œ í›„ ì „ì²´ ì‚¬ì›ì˜ ìˆ«ì");
 		System.out.println(empService.getEmpCount());
 	}
 }
+
+
+
+

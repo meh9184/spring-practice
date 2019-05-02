@@ -6,10 +6,10 @@ import com.coderby.myapp.hr.model.EmpVO;
 
 public interface IEmpService {
 	int getEmpCount();
-	int getEmpCount(int deptId);
+	int getEmpCount(int deptid);
 	List<EmpVO> getEmpList();
-	EmpVO getEmpInfo(int empId);
+	EmpVO getEmpInfo(int empid);
 	void insertEmp(EmpVO emp);
 	void updateEmp(EmpVO emp);
-	void deleteEmp(int empId, String email);
+	void deleteEmp(int empid, String email);
 }

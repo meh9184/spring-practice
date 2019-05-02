@@ -38,15 +38,16 @@ public class EmpRepository implements IEmpRepository {
 	}
 	
 	
+	
 	@Override
 	public int getEmpCount() {
 		String sql = "SELECT COUNT(*) FROM employees";
 		return jdbcTemplate.queryForObject(sql, Integer.class);
 	}
 
-	public int getEmpCount(int deptId) {
+	public int getEmpCount(int deptid) {
 		String sql = "SELECT COUNT(*) FROM EMPLOYEES WHERE department_id=?";
-		return jdbcTemplate.queryForObject(sql, Integer.class, deptId);
+		return jdbcTemplate.queryForObject(sql, Integer.class, deptid);
 	}
 
 	@Override
@@ -56,9 +57,9 @@ public class EmpRepository implements IEmpRepository {
 	}
 
 	@Override
-	public EmpVO getEmpInfo(int empId) {
+	public EmpVO getEmpInfo(int empid) {
 		String sql = "SELECT * FROM EMPLOYEES WHERE employee_id=?";
-		return jdbcTemplate.queryForObject(sql, new EmpMapper(), empId);
+		return jdbcTemplate.queryForObject(sql, new EmpMapper(), empid);
 	}
 
 	@Override
@@ -100,15 +101,15 @@ public class EmpRepository implements IEmpRepository {
 	}
 
 	@Override
-	public void deleteEmp(int empId, String email) {
+	public void deleteEmp(int empid, String email) {
 		String sql = "DELETE FROM employees WHERE employee_id=? AND email=?";
-		jdbcTemplate.update(sql, empId, email);
+		jdbcTemplate.update(sql, empid, email);
 	}
 
 	@Override
-	public void deleteJobHistory(int empId) {
+	public void deleteJobHistory(int empid) {
 		String sql = "DELETE FROM job_history WHERE employee_id=?";
-		jdbcTemplate.update(sql, empId);
+		jdbcTemplate.update(sql, empid);
 	}
 	
 }
