@@ -7,9 +7,8 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	
 	<!-- 1. 컨트롤러 사용을 위한 controller 패키지 컴포넌트 스캔 -->
-	<context:component-scan base-package="com.myapp.controller" />
+	<context:component-scan base-package="com.coderby.myapp.controller" />
 	
 	<!-- 2. 어노테이션을 이용한 mvc 패턴 개발이 가능하도록 mvc 어노테이션 입력 -->
 	<mvc:annotation-driven />

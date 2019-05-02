@@ -24,7 +24,7 @@ public class EmpController {
 			model.addAttribute("count", empService.getEmpCount(deptId));
 		}
 		
-		return "hr/count";
+		return "/hr/count";
 	}
 	
 }
