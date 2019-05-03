@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.coderby.myapp.hr.model.EmpVO;
@@ -44,7 +45,13 @@ public class EmpController {
 		return "hr/view";
 	}
 	
-
+	@RequestMapping(value="/hr/insert", method=RequestMethod.GET)
+	public String insertEmp(Model model) {
+//		model.addAttribute("deptList", empService.getAllDeptId());
+//		model.addAttribute("gobList", empService.getAllJobId());
+//		model.addAttribute("managerList", empService.getAllManagertId());
+		return "hr/insertform";
+	}
 }
 
 

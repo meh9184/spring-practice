@@ -27,7 +27,6 @@ INDEX VERSION 1.131+C:\Users\¹®ÀºÈ¯\eclipse-workspace\ITBank_Spring\.metadata\.p
 1365321313.index
 1274929008.index
 2838148490.index
-3348266594.index
 1209566061.index
 4289039663.index
 704770140.index
