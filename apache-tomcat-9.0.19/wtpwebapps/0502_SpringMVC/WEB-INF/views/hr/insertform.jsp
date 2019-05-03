@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -10,56 +9,57 @@
 </head>
 <body>
 
-<h1>사원 정보 상세 조회</h1>
-<table border="1">
-	<tr>
-		<td>EMPLOYEE_ID</td>
-		<td>${emp.employeeId}</td>
-	</tr>
-	<tr>
-		<td>FIRST_NAME</td>
-		<td>${emp.firstName}</td>
-	</tr>	
-	<tr>
-		<td>LAST_NAME</td>
-		<td>${emp.lastName}</td>
-	</tr>
-	<tr>
-		<td>EMAIL</td>
-		<td>${emp.email}</td>
-	</tr>
-	<tr>
-		<td>PHONE_NUMBER</td>
-		<td>${emp.phoneNumber}</td>
-	</tr>
-	<tr>
-		<td>HIRE_DATE</td>
-		<td>${emp.hireDate}</td>
-	</tr>
-	<tr>
-		<td>JOB_ID</td>
-		<td>${emp.jobId}</td>
-	</tr>
-	<tr>
-		<td>SALARY</td>
-		<td>${emp.salary}</td>
-	</tr>
-	<tr>
-		<td>COMMISSION_PCT</td>
-		<td>${emp.commissionPct}</td>
-	</tr>
-	<tr>
-		<td>MANAGER_ID</td>
-		<td>${emp.managerId}</td>
-	</tr>
-	<tr>
-		<td>DEPARTMENT_ID</td>
-		<td>${emp.departmentId}</td>
-	</tr>
-</table>
+<h1>사원 정보 입력</h1>
 
-<a href="#">수정하기</a>
-<a href="#">삭제하기</a>
+<form action="#" method="post">
+	<table border="1">
+		<tr>
+			<td>EMPLOYEE_ID</td>
+			<td><input type="number" name="employeeId"/></td>
+		</tr>
+		<tr>
+			<td>FIRST_NAME</td>
+			<td><input type="text" name="firstName"/></td>
+		</tr>	
+		<tr>
+			<td>LAST_NAME</td>
+			<td><input type="text" name="lastName"/></td>
+		</tr>
+		<tr>
+			<td>EMAIL</td>
+			<td><input type="text" name="email"/></td>
+		</tr>
+		<tr>
+			<td>PHONE_NUMBER</td>
+			<td><input type="text" name="phoneNumber"/></td>
+		</tr>
+		<tr>
+			<td>HIRE_DATE</td>
+			<td><input type="date" name="hireDate"/></td>
+		</tr>
+		<tr>
+			<td>JOB_ID</td>
+			<td><input type="text" name="jobId"/></td>
+		</tr>
+		<tr>
+			<td>SALARY</td>
+			<td><input type="number" name="salary"/></td>
+		</tr>
+		<tr>
+			<td>COMMISSION_PCT</td>
+			<td><input type="number" name="commissionPct"/></td>
+		</tr>
+		<tr>
+			<td>MANAGER_ID</td>
+			<td><input type="number" name="managerId"/></td>
+		</tr>
+		<tr>
+			<td>DEPARTMENT_ID</td>
+			<td><input type="number" name="departmentId"/></td>
+		</tr>
+	</table>
+</form>
+
 
 </body>
 </html>
