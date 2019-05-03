@@ -55,10 +55,11 @@
 	<tr>
 		<td>DEPARTMENT_ID</td>
 		<td>${emp.departmentId}</td>
-	</tr>	
-		
+	</tr>
 </table>
 
+<a href="#">수정하기</a>
+<a href="#">삭제하기</a>
 
 </body>
 </html>
