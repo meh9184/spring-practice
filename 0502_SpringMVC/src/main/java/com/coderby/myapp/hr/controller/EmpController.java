@@ -31,11 +31,19 @@ public class EmpController {
 	}
 	
 	@RequestMapping(value= {"/hr", "/hr/list"})
-	public String allGetEmps(Model model) {
+	public String getAllEmps(Model model) {
 		List<EmpVO> empList = empService.getEmpList();
 		model.addAttribute("empList", empList);
 		return "hr/list";
 	}
+	
+	@RequestMapping(value="/hr/{employeeId}")
+	public String getEmpInfo(@PathVariable int employeeId, Model model) {
+		EmpVO emp = empService.getEmpInfo(employeeId);
+		model.addAttribute("emp", emp);
+		return "hr/view";
+	}
+	
 
 }
 
