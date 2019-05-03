@@ -663,3 +663,104 @@ java.net.UnknownHostException: 알려진 호스트가 없습니다 (dist.springs
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:13:50.286
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:38:49.780
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:38:49.835
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jface.text 2 0 2019-05-03 13:39:46.303
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:40:57.050
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:40:57.084
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jface.text 2 0 2019-05-03 13:41:16.681
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-05-03 13:41:16.709
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:42:11.750
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:42:11.783
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:42:14.895
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 13:42:14.912
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2019-05-03 13:44:36.494
+!MESSAGE Array index out of range: 8
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 8
+	at org.eclipse.wst.sse.core.internal.text.TextRegionListImpl.get(TextRegionListImpl.java:147)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.isEmptyTag(JSPTranslator.java:1103)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.addStartTagVariable(JSPTranslator.java:1041)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.addCustomTaglibVariables(JSPTranslator.java:1136)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.translateEmbeddedJSPInAttribute(JSPTranslator.java:1982)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.checkAllAttributeValueContainers(JSPTranslator.java:1683)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.translateXMLNode(JSPTranslator.java:1649)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.translateRegionContainer(JSPTranslator.java:1427)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.translate(JSPTranslator.java:1204)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslationAdapter.getJSPTranslation(JSPTranslationAdapter.java:152)
+	at org.eclipse.jst.jsp.core.internal.validation.JSPJavaValidator.performValidation(JSPJavaValidator.java:327)
+	at org.eclipse.jst.jsp.core.internal.validation.JSPJavaValidator.validateFile(JSPJavaValidator.java:430)
+	at org.eclipse.jst.jsp.core.internal.validation.JSPValidator.validate(JSPValidator.java:173)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.validate(ReconcileStepForValidator.java:250)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.reconcileModel(ReconcileStepForValidator.java:208)
+	at org.eclipse.jface.text.reconciler.AbstractReconcileStep.reconcile(AbstractReconcileStep.java:92)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ValidatorStrategy.reconcile(ValidatorStrategy.java:269)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DocumentRegionProcessor.process(DocumentRegionProcessor.java:321)
+	at org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor.process(StructuredRegionProcessor.java:258)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor$BackgroundThread.run(DirtyRegionProcessor.java:692)
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2019-05-03 14:03:01.892
+!MESSAGE Array index out of range: 8
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 8
+	at org.eclipse.wst.sse.core.internal.text.TextRegionListImpl.get(TextRegionListImpl.java:147)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.isEmptyTag(JSPTranslator.java:1103)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.addStartTagVariable(JSPTranslator.java:1041)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.addCustomTaglibVariables(JSPTranslator.java:1136)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.translateEmbeddedJSPInAttribute(JSPTranslator.java:1982)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.checkAllAttributeValueContainers(JSPTranslator.java:1683)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.translateXMLNode(JSPTranslator.java:1649)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.translateRegionContainer(JSPTranslator.java:1427)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.translate(JSPTranslator.java:1204)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslationAdapter.getJSPTranslation(JSPTranslationAdapter.java:152)
+	at org.eclipse.jst.jsp.core.internal.validation.JSPJavaValidator.performValidation(JSPJavaValidator.java:327)
+	at org.eclipse.jst.jsp.core.internal.validation.JSPJavaValidator.validateFile(JSPJavaValidator.java:430)
+	at org.eclipse.jst.jsp.core.internal.validation.JSPValidator.validate(JSPValidator.java:173)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.validate(ReconcileStepForValidator.java:250)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.reconcileModel(ReconcileStepForValidator.java:208)
+	at org.eclipse.jface.text.reconciler.AbstractReconcileStep.reconcile(AbstractReconcileStep.java:92)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ValidatorStrategy.reconcile(ValidatorStrategy.java:269)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DocumentRegionProcessor.process(DocumentRegionProcessor.java:321)
+	at org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor.process(StructuredRegionProcessor.java:258)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor$BackgroundThread.run(DirtyRegionProcessor.java:692)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 14:05:16.745
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 14:05:16.762
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 14:08:00.226
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 14:08:00.243
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 14:08:23.059
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-03 14:08:23.112
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
