@@ -58,6 +58,11 @@ public class EmpService implements IEmpService {
 	public List<Map<String, Object>> getAllDeptId() {
 		return empRepository.getAllDeptId();
 	}
+
+	@Override
+	public List<Map<String, Object>> getAllJobId() {
+		return empRepository.getAllJobId();
+	}
 }
 
 

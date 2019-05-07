@@ -118,6 +118,14 @@ public class EmpRepository implements IEmpRepository {
 					"FROM departments";
 		return jdbcTemplate.queryForList(sql);
 	}
+
+	@Override
+	public List<Map<String, Object>> getAllJobId() {
+		String sql = "SELECT job_id as jobId, " +
+				"job_title as jobTitle " +
+				"FROM jobs";
+		return jdbcTemplate.queryForList(sql);
+	}
 	
 }
 
