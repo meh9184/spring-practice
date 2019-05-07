@@ -15,4 +15,5 @@ public interface IEmpService {
 	void deleteEmp(int empid, String email);
 	List<Map<String, Object>> getAllDeptId();
 	List<Map<String, Object>> getAllJobId();
+	List<Map<String, Object>> getAllManagerId();
 }
