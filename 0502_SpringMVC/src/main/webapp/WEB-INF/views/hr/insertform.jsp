@@ -40,7 +40,13 @@
    </tr>
    <tr>
       <th>JOB_ID</th>
-      <td><input type="text" name="jobId" required="required"/></td>
+ 	  <td>
+ 	    <select>
+ 	    	<c:forEach var="job" items="${jobList}">
+ 	    		<option value="${job.jobId}">${job.jobTitle}</option>
+ 	    	</c:forEach>
+ 	    </select>
+	  </td>
    </tr>
    <tr>
       <th>SALARY</th>
@@ -54,11 +60,23 @@
    </tr>
    <tr>
       <th>MANAGER_ID</th>
-      <td><input type="number" name="managerId" required="required"/></td>
+      <td>
+       	<select>
+ 	    	<c:forEach var="manager" items="${managerList}">
+ 	    		<option value="${manager.managerId}">${manager.firstName}</option>
+ 	    	</c:forEach>
+ 	    </select>
+	  </td>
    </tr>
    <tr>
       <th>DEPARTMENT_ID</th>
-      <td><input type="number" name="departmentId" required="required"/></td>
+	  <td>
+       	<select>
+ 	    	<c:forEach var="department" items="${departmentList}">
+ 	    		<option value="${department.departmentId}">${department.departmentName}</option>
+ 	    	</c:forEach>
+ 	    </select>
+	  </td>
    </tr>
    <tr>
       <th>&nbsp;</th>
