@@ -72,8 +72,8 @@
       <th>DEPARTMENT_ID</th>
 	  <td>
        	<select>
- 	    	<c:forEach var="department" items="${departmentList}">
- 	    		<option value="${department.departmentId}">${department.departmentName}</option>
+ 	    	<c:forEach var="dept" items="${deptList}">
+ 	    		<option value="${dept.departmentId}">${dept.departmentName}</option>
  	    	</c:forEach>
  	    </select>
 	  </td>
