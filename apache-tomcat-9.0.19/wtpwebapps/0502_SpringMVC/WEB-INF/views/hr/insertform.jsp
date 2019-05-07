@@ -14,49 +14,49 @@
 <table border="1">
    <tr>
       <th>EMPLOYEE_ID</th>
-      <td><input type="number" name="employeeId" /></td>
+      <td><input type="number" name="employeeId" required="required"/></td>
    </tr>
    <tr>
       <th>FIRST_NAME</th>
-      <td><input type="text" name="firstName" /></td>
+      <td><input type="text" name="firstName" required="required"/></td>
    </tr>
    <tr>
       <th>LAST_NAME</th>
-      <td><input type="text" name="lastName" /></td>
+      <td><input type="text" name="lastName" required="required"/></td>
    </tr>
    <tr>
       <th>EMAIL</th>
-      <td><input type="text" name="email" /></td>
+      <td><input type="text" name="email" required="required"/></td>
    </tr>
    <tr>
       <th>PHONE_NUMBER</th>
-      <td><input type="text" name="phoneNumber" /></td>
+      <td><input type="text" name="phoneNumber" required="required"/></td>
    </tr>
    <tr>
       <th>HIRE_DATE</th>
-      <td><input type="date" name="hireDate" /></td>
+      <td><input type="date" name="hireDate" required="required"/></td>
    </tr>
    <tr>
       <th>JOB_ID</th>
-      <td><input type="text" name="jobId" /></td>
+      <td><input type="text" name="jobId" required="required"/></td>
    </tr>
    <tr>
       <th>SALARY</th>
-      <td><input type="number" name="salary" /></td>
+      <td><input type="number" name="salary" required="required"/></td>
    </tr>
    <tr>
       <th>COMMISSION_PCT</th>
       <td><input type="number" name="commissionPct" 
-               step="0.1" min="0" max="0.99">
+               step="0.1" min="0" max="0.99" required="required"/>
       </td>
    </tr>
    <tr>
       <th>MANAGER_ID</th>
-      <td><input type="number" name="managerId" /></td>
+      <td><input type="number" name="managerId" required="required"/></td>
    </tr>
    <tr>
       <th>DEPARTMENT_ID</th>
-      <td><input type="number" name="departmentId" /></td>
+      <td><input type="number" name="departmentId" required="required"/></td>
    </tr>
    <tr>
       <th>&nbsp;</th>

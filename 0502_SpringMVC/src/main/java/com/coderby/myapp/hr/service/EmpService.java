@@ -1,6 +1,7 @@
 package com.coderby.myapp.hr.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,6 @@ import com.coderby.myapp.hr.model.EmpVO;
 @Service
 public class EmpService implements IEmpService {
 
-	//하나 이상의 IEmpRepository의 쿼리문을 엮어서 하나의 서비스로 구성
 	@Autowired
 	IEmpRepository empRepository;
 	
@@ -51,6 +51,12 @@ public class EmpService implements IEmpService {
 	public void deleteEmp(int empid, String email) {
 		empRepository.deleteJobHistory(empid);
 		empRepository.deleteEmp(empid, email);
+	}
+
+	
+	@Override
+	public List<Map<String, Object>> getAllDeptId() {
+		return empRepository.getAllDeptId();
 	}
 }
 

@@ -3,6 +3,7 @@ package com.coderby.myapp.hr.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -36,8 +37,6 @@ public class EmpRepository implements IEmpRepository {
 		}
 		
 	}
-	
-	
 	
 	@Override
 	public int getEmpCount() {
@@ -110,6 +109,14 @@ public class EmpRepository implements IEmpRepository {
 	public void deleteJobHistory(int empid) {
 		String sql = "DELETE FROM job_history WHERE employee_id=?";
 		jdbcTemplate.update(sql, empid);
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllDeptId() {
+		String sql = "SELECT department_id as departmentId, " +
+					"department_name as departmentName " +
+					"FROM departments";
+		return jdbcTemplate.queryForList(sql);
 	}
 	
 }

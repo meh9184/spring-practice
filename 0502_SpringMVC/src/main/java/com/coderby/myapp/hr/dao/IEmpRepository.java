@@ -1,6 +1,7 @@
 package com.coderby.myapp.hr.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.coderby.myapp.hr.model.EmpVO;
 
@@ -13,7 +14,7 @@ public interface IEmpRepository {
 	void updateEmp(EmpVO emp);
 	void deleteEmp(int empid, String email);
 	void deleteJobHistory(int empid);
-//	List<EmpVO> getAllDeptId();
+	List<Map<String, Object>> getAllDeptId();
 //	List<EmpVO> getAllJobId();
 //	List<EmpVO> getAllManagertId();
 }
