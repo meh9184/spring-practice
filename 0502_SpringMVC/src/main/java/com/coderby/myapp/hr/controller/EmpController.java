@@ -53,14 +53,17 @@ public class EmpController {
 		return "hr/insertform";
 	}
 
-	
 	@RequestMapping(value="/hr/insert", method=RequestMethod.POST)
 	public String insertEmp(EmpVO emp, Model model) {
-		System.out.println(emp);
 		empService.insertEmp(emp);
 		return "redirect:/hr";
 	}
 	
+	@RequestMapping(value="/hr/delete", method=RequestMethod.GET)
+	public String deleteEmp(int empId, Model model) {		
+		model.addAttribute("deptList", empService.getEmpInfo(empId));
+		return "hr/deleteform";
+	}		
 	
 }
 
