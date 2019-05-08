@@ -61,7 +61,7 @@ public class EmpController {
 	
 	@RequestMapping(value="/hr/delete", method=RequestMethod.GET)
 	public String deleteEmp(int empId, Model model) {		
-		model.addAttribute("deptList", empService.getEmpInfo(empId));
+		model.addAttribute("emp", empService.getEmpInfo(empId));
 		return "hr/deleteform";
 	}		
 	
