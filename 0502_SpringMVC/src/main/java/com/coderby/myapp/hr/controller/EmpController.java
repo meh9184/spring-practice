@@ -72,7 +72,10 @@ public class EmpController {
 	}
 	
 	@RequestMapping(value="/hr/update", method=RequestMethod.GET)
-	public String updateEmp(int empid, Model model) {		
+	public String updateEmp(int empid, Model model) {	
+		model.addAttribute("deptList", empService.getAllDeptId());
+		model.addAttribute("jobList", empService.getAllJobId());
+		model.addAttribute("managerList", empService.getAllManagerId());
 		model.addAttribute("emp", empService.getEmpInfo(empid));
 		return "hr/updateform";
 	}
