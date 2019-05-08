@@ -63,8 +63,11 @@ public class EmpController {
 	public String deleteEmp(int empId, Model model) {		
 		model.addAttribute("emp", empService.getEmpInfo(empId));
 		return "hr/deleteform";
-	}		
+	}
 	
+	@RequestMapping(value="/hr/delete", method=RequestMethod.POST)
+	public String deleteEmp(int empid, String email, Model model) {		
+		empService.deleteEmp(empid, email);
+		return "redirect:/hr";
+	}
 }
-
-
