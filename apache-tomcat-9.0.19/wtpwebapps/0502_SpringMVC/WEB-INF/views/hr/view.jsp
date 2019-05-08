@@ -59,7 +59,7 @@
 </table>
 
 <a href="#">수정하기</a>
-<a href="#">삭제하기</a>
+<a href="./delete?empid=${emp.employeeId}">삭제하기</a>
 
 </body>
 </html>
