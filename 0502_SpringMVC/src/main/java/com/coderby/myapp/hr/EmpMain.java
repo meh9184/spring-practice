@@ -14,11 +14,6 @@ public class EmpMain {
 		IEmpService empService = 
 				context.getBean("empService", IEmpService.class);
 
-		System.out.println(empService.getAllDeptId());
-		System.out.println(empService.getAllJobId());
-		System.out.println(empService.getAllManagerId());
-		
-		
 //		System.out.println("--- �쟾泥� �궗�썝�쓽 �닔 議고쉶");
 //		System.out.println(empService.getEmpCount());
 //		

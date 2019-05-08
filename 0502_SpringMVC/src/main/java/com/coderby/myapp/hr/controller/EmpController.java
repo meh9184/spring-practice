@@ -70,4 +70,16 @@ public class EmpController {
 		empService.deleteEmp(empid, email);
 		return "redirect:/hr/list";
 	}
+	
+	@RequestMapping(value="/hr/update", method=RequestMethod.GET)
+	public String updateEmp(int empid, Model model) {		
+		model.addAttribute("emp", empService.getEmpInfo(empid));
+		return "hr/updateform";
+	}
+	
+	@RequestMapping(value="/hr/update", method=RequestMethod.POST)
+	public String deleteEmp(EmpVO emp, Model model) {		
+		empService.updateEmp(emp);;
+		return "redirect:/hr/list";
+	}
 }

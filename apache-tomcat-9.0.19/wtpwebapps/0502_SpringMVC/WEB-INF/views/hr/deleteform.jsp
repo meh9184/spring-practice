@@ -13,10 +13,11 @@ ${emp.employeeId}사원 ${emp.firstName} ${emp.lastName}의 정보를 삭제합니다. 삭제
 
 ${emp.employeeId}사원의 이메일을 입력하세요 <br><br>
 
-<form action="#" method="post">
+<form action="./delete" method="post">
 <input type="text" name="email" required="required"/>
 <input type="hidden" name="empid" value="${emp.employeeId}"/>
 <input type="submit" value="삭제" />
 </form>
+
 </body>
 </html>
