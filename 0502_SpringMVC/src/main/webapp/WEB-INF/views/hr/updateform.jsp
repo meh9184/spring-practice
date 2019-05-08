@@ -20,23 +20,23 @@
    </tr>
    <tr>
       <th>FIRST_NAME</th>
-      <td><input type="text" name="firstName" required="required"/></td>
+      <td><input type="text" name="firstName" required="required" value="${emp.firstName}"/></td>
    </tr>
    <tr>
       <th>LAST_NAME</th>
-      <td><input type="text" name="lastName" required="required"/></td>
+      <td><input type="text" name="lastName" required="required" value="${emp.lastName}"/></td>
    </tr>
    <tr>
       <th>EMAIL</th>
-      <td><input type="text" name="email" required="required"/></td>
+      <td><input type="text" name="email" required="required" value="${emp.email}"/></td>
    </tr>
    <tr>
       <th>PHONE_NUMBER</th>
-      <td><input type="text" name="phoneNumber" required="required"/></td>
+      <td><input type="text" name="phoneNumber" required="required" value="${emp.phoneNumber}"/></td>
    </tr>
    <tr>
       <th>HIRE_DATE</th>
-      <td><input type="date" name="hireDate" required="required"/></td>
+      <td><input type="date" name="hireDate" required="required" value="${emp.hireDate}"/></td>
    </tr>
    <tr>
       <th>JOB_ID</th>
@@ -50,12 +50,12 @@
    </tr>
    <tr>
       <th>SALARY</th>
-      <td><input type="number" name="salary" required="required"/></td>
+      <td><input type="number" name="salary" required="required" value="${emp.salary}"/></td>
    </tr>
    <tr>
       <th>COMMISSION_PCT</th>
       <td><input type="number" name="commissionPct" 
-               step="0.1" min="0" max="0.99" required="required"/>
+               step="0.1" min="0" max="0.99" required="required" value="${emp.commissionPct}"/>
       </td>
    </tr>
    <tr>
