@@ -46,7 +46,7 @@ public class EmpController {
 	}
 	
 	@RequestMapping(value="/hr/insert", method=RequestMethod.GET)
-	public String insertEmp(Model model) {
+	public String insertEmp(Model model) {		
 		model.addAttribute("deptList", empService.getAllDeptId());
 		model.addAttribute("jobList", empService.getAllJobId());
 		model.addAttribute("managerList", empService.getAllManagerId());
@@ -60,6 +60,8 @@ public class EmpController {
 		empService.insertEmp(emp);
 		return "redirect:/hr";
 	}
+	
+	
 }
 
 
