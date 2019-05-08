@@ -52,6 +52,14 @@ public class EmpController {
 		model.addAttribute("managerList", empService.getAllManagerId());
 		return "hr/insertform";
 	}
+
+	
+	@RequestMapping(value="/hr/insert", method=RequestMethod.POST)
+	public String insertEmp(EmpVO emp, Model model) {
+		System.out.println(emp);
+		empService.insertEmp(emp);
+		return "redirect:/hr";
+	}
 }
 
 
