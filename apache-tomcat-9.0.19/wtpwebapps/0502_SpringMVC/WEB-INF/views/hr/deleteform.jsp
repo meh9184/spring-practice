@@ -16,8 +16,8 @@ ${emp.employeeId}사원의 이메일을 입력하세요 <br><br>
 <form action="#" method="post">
 <table border="1">
    <tr>
-      <th>EMAIL</th>
       <td><input type="text" name="email" required="required"/></td>
+      <td><input type="submit" value="삭제" /></td>
    </tr>
 </table>
 </form>
