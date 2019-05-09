@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/resources/spring/application-config.xml</config>
 		<config>src/main/webapp/WEB-INF/spring/mvc-config.xml</config>
+		<config>src/main/java/com/coderby/myapp/hr/dao/EmpMapper.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
