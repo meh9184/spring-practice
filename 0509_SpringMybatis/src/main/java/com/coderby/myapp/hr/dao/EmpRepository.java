@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 
 import com.coderby.myapp.hr.model.EmpVO;
 
-@Repository
 public class EmpRepository implements IEmpRepository {
 
 	@Autowired
