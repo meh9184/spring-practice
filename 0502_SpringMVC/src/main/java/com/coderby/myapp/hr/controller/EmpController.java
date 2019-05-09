@@ -82,7 +82,7 @@ public class EmpController {
 	
 	@RequestMapping(value="/hr/update", method=RequestMethod.POST)
 	public String deleteEmp(EmpVO emp, Model model) {		
-		empService.updateEmp(emp);;
-		return "redirect:/hr/list";
+		empService.updateEmp(emp);
+		return "redirect:/hr/"+emp.getEmployeeId();
 	}
 }
