@@ -82,10 +82,15 @@
       <th>DEPARTMENT_ID</th>
 	  <td>
        	<select name="departmentId">
- 	    	<c:forEach var="dept" items="${deptList}">
- 	    		<option value="${dept.departmentId}">${dept.departmentName}</option>
- 	    	</c:forEach>
- 	    </select>
+            <c:forEach var="department" items="${deptList}">
+               <c:if test="${emp.departmentId == department.departmentId}">
+                  <option value="${department.departmentId}" selected>${department.departmentName}</option>
+               </c:if>
+               <c:if test="${emp.departmentId != department.departmentId }">
+                  <option value="${department.departmentId}">${department.departmentName}</option>
+               </c:if>
+            </c:forEach>
+         </select>
 	  </td>
    </tr>
    <tr>
