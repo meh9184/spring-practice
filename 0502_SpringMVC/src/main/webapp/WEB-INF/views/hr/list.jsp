@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<h1>사원 정보 조회</h1>
+
 <table border="1">
 
 	<tr>

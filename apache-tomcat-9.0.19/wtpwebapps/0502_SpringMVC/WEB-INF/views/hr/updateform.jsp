@@ -6,17 +6,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>사원정보 수정</title>
+<title>사원 정보 수정</title>
 </head>
 <body>
 
-<h1>사원정보 입력</h1>
+<h1>사원 정보 수정</h1>
 
 <form action="#" method="post">
 <table border="1">
    <tr>
       <th>EMPLOYEE_ID</th>
-      <td><input type="number" name="employeeId" required="required" value="${emp.employeeId}"/></td>
+      <td><input type="number" name="employeeId" value="${emp.employeeId}" readonly/></td>
    </tr>
    <tr>
       <th>FIRST_NAME</th>
