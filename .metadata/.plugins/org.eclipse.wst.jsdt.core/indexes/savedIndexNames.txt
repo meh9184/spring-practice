@@ -1,12 +1,10 @@
 INDEX VERSION 1.4+C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4060807287.index
 2094941666.index
 1878907967.index
-1832655685.index
-3123628053.index
 688570839.index
 1474259071.index
 4078535758.index
-928581854.index
 2402893360.index
 2466507359.index
 1365321313.index
@@ -15,8 +13,6 @@ INDEX VERSION 1.4+C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plu
 3433682341.index
 3372862699.index
 704770140.index
-2873892085.index
 1397185079.index
 2584383099.index
-3794935631.index
 1357621994.index
