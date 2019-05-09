@@ -42,10 +42,15 @@
       <th>JOB_ID</th>
  	  <td>
  	    <select name="jobId">
- 	    	<c:forEach var="job" items="${jobList}">
- 	    		<option value="${job.jobId}">${job.jobTitle}</option>
- 	    	</c:forEach>
- 	    </select>
+            <c:forEach var="job" items="${jobList}">
+               <c:if test="${emp.jobId == job.jobId}">
+                  <option value="${job.jobId}" selected>${job.jobTitle}</option>
+               </c:if>
+               <c:if test="${emp.jobId != job.jobId }">
+                  <option value="${job.jobId}">${job.jobTitle}</option>
+               </c:if>
+            </c:forEach>
+         </select>
 	  </td>
    </tr>
    <tr>
@@ -62,10 +67,15 @@
       <th>MANAGER_ID</th>
       <td>
        	<select name="managerId">
- 	    	<c:forEach var="manager" items="${managerList}">
- 	    		<option value="${manager.managerId}">${manager.firstName}</option>
- 	    	</c:forEach>
- 	    </select>
+            <c:forEach var="manager" items="${managerList}">
+               <c:if test="${emp.managerId == manager.managerId}">
+                  <option value="${manager.managerId}" selected>${manager.firstName}</option>
+               </c:if>
+               <c:if test="${emp.managerId != manager.managerId }">
+                  <option value="${manager.managerId}">${manager.firstName}</option>
+               </c:if>
+            </c:forEach>
+         </select>
 	  </td>
    </tr>
    <tr>
