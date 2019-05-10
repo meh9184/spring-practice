@@ -46,4 +46,10 @@
 		FROM departments
 	</select>
 	
+	<select id="getAllJobId" resultType="hashmap">
+		SELECT	job_id as jobId, 
+				job_title as jobTitle 
+		FROM jobs
+	</select>
+	
 </mapper>
