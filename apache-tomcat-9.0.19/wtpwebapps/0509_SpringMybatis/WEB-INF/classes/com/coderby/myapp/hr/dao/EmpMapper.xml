@@ -4,6 +4,10 @@
 
 <mapper namespace="com.coderby.myapp.hr.dao.IEmpRepository">
 
+	<resultMap id="empMap" type="com.coderby.myapp.hr.model.EmpVO">
+
+	</resultMap>
+
 	<select id="getEmpCount" parameterType="int" resultType="int">
 		SELECT COUNT(*) FROM EMPLOYEES
 		<if test="deptid != null">
@@ -11,7 +15,7 @@
 		</if>
 	</select>
 
-	<select id="getEmpList" resultType="com.coderby.myapp.hr.model.EmpVO">
+	<select id="getEmpList" resultMap="empMap">
 		SELECT	EMPLOYEE_ID		AS	employeeId,
 				FIRST_NAME		AS	firstName,
 				LAST_NAME		AS	lastName,
@@ -27,4 +31,3 @@
 	</select>
 
 </mapper>
-  
