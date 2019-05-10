@@ -26,6 +26,8 @@
 	</select>
 
 	<select id="getEmpList" resultMap="empMap">
+ 		SELECT * FROM EMPLOYEES
+<!-- 
 		SELECT	EMPLOYEE_ID		AS	employeeId,
 				FIRST_NAME		AS	firstName,
 				LAST_NAME		AS	lastName,
@@ -38,6 +40,7 @@
 				MANAGER_ID		AS	managerId,
 				DEPARTMENT_ID	AS	departmentId
 		FROM EMPLOYEES
+ -->
 	</select>
 
 </mapper>
