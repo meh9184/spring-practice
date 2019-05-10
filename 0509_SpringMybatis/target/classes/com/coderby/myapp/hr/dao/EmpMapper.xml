@@ -34,27 +34,38 @@
 	</select>
 	
 	<insert id="insertEmp" parameterType="com.coderby.myapp.hr.model.EmpVO">
-		INSERT INTO EMPLOYEES VALUES (
+		INSERT INTO EMPLOYEES 
+		VALUES (
 			#{employeeId}, #{firstName}, #{lastName}, #{email}, #{phoneNumber}, 
-			SYSDATE, #{jobId}, #{salary}, #{CommissionPct}, #{managerId}, #{departmentId}
+			SYSDATE, #{jobId}, #{salary}, #{commissionPct}, #{managerId}, #{departmentId}
 		)
 	</insert>
 
+	<update id="updateEmp" parameterType="com.coderby.myapp.hr.model.EmpVO">
+		UPDATE	employees 
+		SET		first_name=?, last_name=?, email=?, phone_number=?, hire_date=?, 
+				job_id=?, salary=?, commission_pct=?, manager_id=?, department_id=? 
+		WHERE employee_id=?
+	</update>
+
+
 	<select id="getAllDeptId" resultType="hashmap">
-		SELECT	department_id as departmentId, 
-				department_name as departmentName 
+		SELECT	department_id AS "departmentId", 
+				department_name AS "departmentName" 
 		FROM departments
 	</select>
 	
 	<select id="getAllJobId" resultType="hashmap">
-		SELECT	job_id as jobId, 
-				job_title as jobTitle 
+		SELECT	job_id AS "jobId", 
+				job_title AS "jobTitle" 
 		FROM jobs
 	</select>
 	
 	<select id="getAllManagerId" resultType="hashmap">
-		SELECT	job_id as jobId, 
-				job_title as jobTitle 
-		FROM jobs
+		SELECT	 d.manager_id AS "managerId", e.first_name AS "firstName" 
+		FROM	 departments d JOIN employees e ON d.manager_id = e.employee_id 
+		ORDER BY d.manager_id
 	</select>
+	
+	
 </mapper>
