@@ -4,7 +4,9 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
@@ -45,14 +47,39 @@
 		<property name="dataSource" ref="dataSource" />	
 	</bean>
 	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath:com/coderby/myapp/**/*.xml" />
+	</bean>
+	
 	<!-- 트랜잭션 사용을 위한 txManager 빈 파일 설정 -->
 	<bean id="txManager" 
 	class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
+	<!-- Mybatis에 적용하기 위한 트랜젝션 설정 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="set" rollback-for="RuntimeException"/>
+			<tx:method name="add" rollback-for="RuntimeException"/>
+			<tx:method name="update" rollback-for="RuntimeException"/>
+			<tx:method name="modify" rollback-for="RuntimeException"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- Mybatis 관련 위빙 설정 -->
+	<aop:config>
+		<aop:pointcut id="servicePublicMethod" expression="execution(public * com.coderby..*Service.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="servicePublicMethod" />
+	</aop:config>
+	
+	<!-- Mybatis 구현 xml 파일을 스캔할 수 있도록 경로 지정 -->
+	<mybatis-spring:scan base-package="com.coderby.myapp.hr.dao" />
+	
+	
 	<!-- 어노테이션을 사용한 트랜잭션 스캔 설정 -->
-	<tx:annotation-driven transaction-manager="txManager" />
+	<!-- <tx:annotation-driven transaction-manager="txManager" /> -->
 	
 	<!-- 트랜잭션 지침 설정 -->
 	<!-- 

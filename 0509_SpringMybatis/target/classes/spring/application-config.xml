@@ -49,10 +49,8 @@
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" ref="classpath:com/coderby/myapp/**/*.xml" />
+		<property name="mapperLocations" value="classpath:com/coderby/myapp/**/*.xml" />
 	</bean>
-	
-	
 	
 	<!-- 트랜잭션 사용을 위한 txManager 빈 파일 설정 -->
 	<bean id="txManager" 

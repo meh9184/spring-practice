@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context docBase="C:\Users\문은환\eclipse-workspace\ITBank_Spring\apache-tomcat-9.0.19\wtpwebapps\0502_SpringMVC" path="" reloadable="true" source="org.eclipse.jst.jee.server:0502_SpringMVC"/>
+<Context docBase="C:\Users\문은환\eclipse-workspace\ITBank_Spring\apache-tomcat-9.0.19\wtpwebapps\0509_SpringMybatis" path="" reloadable="true" source="org.eclipse.jst.jee.server:0509_SpringMybatis"/>
