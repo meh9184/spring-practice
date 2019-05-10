@@ -52,4 +52,9 @@
 		FROM jobs
 	</select>
 	
+	<select id="getAllManagerId" resultType="hashmap">
+		SELECT	job_id as jobId, 
+				job_title as jobTitle 
+		FROM jobs
+	</select>
 </mapper>
