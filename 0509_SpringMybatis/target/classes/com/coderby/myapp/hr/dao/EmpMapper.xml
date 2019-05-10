@@ -29,9 +29,18 @@
  		SELECT * FROM EMPLOYEES
 	</select>
 
-	<select id="getEmpInfo" resultMap="empMap">
+	<select id="getEmpInfo" parameterType="int" resultMap="empMap">
  		SELECT * FROM EMPLOYEES WHERE EMPLOYEE_ID = #{empid}
 	</select>
+	
+	<insert id="insertEmp" parameterType="com.coderby.myapp.hr.model.EmpVO">
+		INSERT INTO EMPLOYEES VALUES (
+			#{employeeId}, #{firstName}, #{lastName}, #{email}, #{phoneNumber}, 
+			SYSDATE, #{jobId}, #{salary}, #{CommissionPct}, #{managerId}, #{departmentId}
+		)
+	</insert>
+
+	
 	
 	
 </mapper>
