@@ -5,7 +5,17 @@
 <mapper namespace="com.coderby.myapp.hr.dao.IEmpRepository">
 
 	<resultMap id="empMap" type="com.coderby.myapp.hr.model.EmpVO">
-
+		<result property="employeeId" column="EMPLOYEE_ID"/>
+		<result property="firstName" column="FIRST_NAME"/>
+		<result property="lastName" column="LAST_NAME"/>
+		<result property="email" column="EMAIL"/>
+		<result property="phoneNumber" column="PHONE_NUMBER"/>
+		<result property="hireDate" column="HIRE_DATE"/>
+		<result property="jobId" column="JOB_ID"/>
+		<result property="salary" column="SALARY"/>
+		<result property="commissionPct" column="COMMISSION_PCT"/>
+		<result property="managerId" column="MANAGER_ID"/>
+		<result property="departmentId" column="DEPARTMENT_ID"/>
 	</resultMap>
 
 	<select id="getEmpCount" parameterType="int" resultType="int">
