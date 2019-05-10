@@ -43,11 +43,17 @@
 
 	<update id="updateEmp" parameterType="com.coderby.myapp.hr.model.EmpVO">
 		UPDATE	employees 
-		SET		first_name=?, last_name=?, email=?, phone_number=?, hire_date=?, 
-				job_id=?, salary=?, commission_pct=?, manager_id=?, department_id=? 
+		SET		first_name=#{firstName}, last_name=#{lastName}, email=#{email}, 
+				phone_number=#{phoneNumber}, hire_date=#{hireDate}, job_id=#{jobId}, 
+				salary=#{salary}, commission_pct=#{commissionPct}, manager_id=#{managerId}, 
+				department_id=#{departmentId} 
 		WHERE employee_id=?
 	</update>
 
+	<delete id="updateEmp">
+		DELETE FROM	employees 
+		WHERE employee_id=#{empid} AND email=#{email}
+	</delete>
 
 	<select id="getAllDeptId" resultType="hashmap">
 		SELECT	department_id AS "departmentId", 
