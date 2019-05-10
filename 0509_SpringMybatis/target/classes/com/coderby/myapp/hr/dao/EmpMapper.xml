@@ -40,7 +40,10 @@
 		)
 	</insert>
 
-	
-	
+	<select id="getAllDeptId" resultType="hashmap">
+		SELECT	department_id as departmentId, 
+				department_name as departmentName 
+		FROM departments
+	</select>
 	
 </mapper>
