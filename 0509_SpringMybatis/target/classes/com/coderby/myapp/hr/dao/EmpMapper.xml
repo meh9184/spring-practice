@@ -27,20 +27,11 @@
 
 	<select id="getEmpList" resultMap="empMap">
  		SELECT * FROM EMPLOYEES
-<!-- 
-		SELECT	EMPLOYEE_ID		AS	employeeId,
-				FIRST_NAME		AS	firstName,
-				LAST_NAME		AS	lastName,
-				EMAIL			AS	email,
-				PHONE_NUMBER	AS	phoneNumber,
-				HIRE_DATE		AS	hireDate,
-				JOB_ID			AS	jobId,
-				SALARY			AS	salary,
-				COMMISSION_PCT	AS	commissionPct,
-				MANAGER_ID		AS	managerId,
-				DEPARTMENT_ID	AS	departmentId
-		FROM EMPLOYEES
- -->
 	</select>
 
+	<select id="getEmpInfo" resultMap="empMap">
+ 		SELECT * FROM EMPLOYEES WHERE EMPLOYEE_ID = #{empid}
+	</select>
+	
+	
 </mapper>
