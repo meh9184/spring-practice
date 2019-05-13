@@ -41,10 +41,14 @@ C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.j
 \0502_SpringMVC\src\main\java
 C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\184102680.index
 \SpringMVC\src\main\java
+C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3909751900.index
+\0513_MemberBoard\src\main\java
 C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1022074081.index
 \0422_AOPTestProxy\src\main\java
 C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2457268401.index
 \0426_SpringJDBC\src\main\java
+C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3625113087.index
+\MemberBoard\src\main\java
 C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1968765478.index
 \0419_DITestAnnotation\src\main\java
 C:\Users\문은환\eclipse-workspace\ITBank_Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\666655480.index
