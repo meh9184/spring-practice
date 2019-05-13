@@ -1,5 +1,9 @@
 package com.coderby.myapp.member.dao;
 
-public interface IMemberDao {
+import com.coderby.myapp.member.vo.MemberVO;
 
+public interface IMemberDao {
+	
+	void insertMember(MemberVO member);
+	
 }
