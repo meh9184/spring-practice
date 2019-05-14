@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.coderby.myapp.member.dao.IMemberDao">
+	
+	<insert id="insertMember" 
+		parameterType="com.coderby.myapp.member.vo.MemberVO">
+		INSERT INTO
+			member(id, pw, name, email, address, rdate)
+		VALUES
+			(#{id}, #{pw}, #{name}, #{email}, #{address}, SYSDATE)
+	</insert>
+	
+	<select id="checkId" resultType="com.coderby.myapp.member.vo.MemberVO">
+		SELECT * FROM member 
+			WHERE 
+		id = #{id}
+	</select>
+	
+	<delete id="deleteMember">
+		DELETE FROM member 
+			WHERE 
+		id = #{id} AND pw = #{pw}	
+	</delete>
+	
+	<update id="updateMember" parameterType="com.coderby.myapp.member.vo.MemberVO">
+		UPDATE member
+		SET
+			pw=#{pw}, name=#{name}, email=#{email}, address=#{address}
+		WHERE
+			id=#{id}
+	</update>
+	
+</mapper>
+
+
+
+
+
+

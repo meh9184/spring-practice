@@ -7,7 +7,7 @@ import com.coderby.myapp.member.dao.IMemberDao;
 import com.coderby.myapp.member.vo.MemberVO;
 
 @Service
-public class MemberService implements IMemeberService{
+public class MemberService implements IMemberService{
 
 	@Autowired
 	IMemberDao memberDao;
