@@ -1,5 +1,5 @@
 # spring-practice
-Spring 스터디 Repository
+Spring 스터디
 
 + DI
 + AOP
