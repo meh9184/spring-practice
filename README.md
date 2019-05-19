@@ -7,7 +7,7 @@ Spring 스터디
 > + Transactoion
 > + MVC
 > + Mybatis
-
+> 
 > 구현한 기능
 > + 사원 관리
 > + 게시판
