@@ -1,6 +1,6 @@
 # spring-practice
-Spring 스터디
-
+> Spring 스터디
+> 
 > ## 주요 내용
 > + DI
 > + AOP
