@@ -1,5 +1,5 @@
 # spring-practice
-> Spring 스터디
+> Spring 프레임워크 스터디
 > 
 > ## 주요 내용
 > + DI
